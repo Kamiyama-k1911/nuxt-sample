@@ -35,7 +35,7 @@ export default {
   },
 }
 </script>
-<style lang="scss">
+<style lang="scss" module>
 .container {
   .number {
     font-size: 64px;
