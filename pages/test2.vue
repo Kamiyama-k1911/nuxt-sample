@@ -17,13 +17,16 @@ export default {
   data() {
     return { number: 0, users: [] }
   },
-  created() {
-    console.log('created')
-    this.$axios
-      .get('http://jsonplaceholder.typicode.com/users')
-      .then((response) => {
-        this.users = response.data
-      })
+  async created() {
+    try {
+      const response = await this.$axios.get(
+        'http://jsonplaceholder.typicode.com/userssssss'
+      )
+      console.log(response)
+    } catch (err) {
+      const res = err.response
+      console.log(res)
+    }
   },
   mounted() {
     console.log('mounted')
