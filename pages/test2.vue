@@ -20,9 +20,9 @@ export default {
   async created() {
     try {
       const response = await this.$axios.get(
-        'http://jsonplaceholder.typicode.com/userssssss'
+        'http://jsonplaceholder.typicode.com/users'
       )
-      console.log(response)
+      this.users = response.data
     } catch (err) {
       const res = err.response
       console.log(res)
